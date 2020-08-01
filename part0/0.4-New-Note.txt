@@ -1,0 +1,30 @@
+title 0.4: new note
+
+User->Browser: user click save button
+Browser -> Server: Request Method: POST, Request URL: https://fullstack-exampleapp.herokuapp.com/new_note 
+Server --> Browser: Status Code: 302 Found
+                    
+Browser -> Server: Request Method: GET, Request URL: https://fullstack-exampleapp.herokuapp.com/notes
+Server --> Browser: Status Code: 304 Not Modified
+
+Browser -> Server: Request Method: GET, Request URL: https://fullstack-exampleapp.herokuapp.com/main.css 
+Server --> Browser: Status Code: 304 Not Modified
+
+Browser -> Server: Request Method: GET, Request URL:https://fullstack-exampleapp.herokuapp.com/main.js 
+Server --> Browser: Status Code: 304 Not Modified
+
+note over Browser:
+browser starts executing js-code
+that requests JSON data from server 
+end note
+
+
+Browser -> Server: Request Method: GET, https://fullstack-exampleapp.herokuapp.com/data.json
+Server--> Browser: Status Code: 200  OK  [{content: "HTML is easy", date: "2019-05-23T17:30:31.098Z"},…]
+
+note over Browser:
+browser executes the event handler
+that renders notes to display
+end note
+
+

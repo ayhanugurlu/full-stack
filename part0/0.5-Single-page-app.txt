@@ -1,0 +1,26 @@
+title 0.5: Single page app
+
+Browser -> Server: Request Method: GET, Request URL: https://fullstack-exampleapp.herokuapp.com/spa
+Server --> Browser: Status Code: 200 OK
+                    
+Browser -> Server: Request Method: GET, Request URL:https://fullstack-exampleapp.herokuapp.com/main.css
+Server --> Browser: Status Code: 200 OK
+
+Browser -> Server: Request Method: GET, Request URL:https://fullstack-exampleapp.herokuapp.com/spa.js
+Server --> Browser: Status Code: 200 OK
+
+note over Browser:
+browser starts executing js-code
+that requests JSON data from server 
+end note
+
+
+Browser -> Server: Request Method: GET, https://fullstack-exampleapp.herokuapp.com/data.json
+Server--> Browser: Status Code: 200  OK [{content: "HTML is easy", date: "2019-05-23T17:30:31.098Z"},…]
+
+note over Browser:
+browser executes the event handler
+that renders notes to display
+end note
+
+

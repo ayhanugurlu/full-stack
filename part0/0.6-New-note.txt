@@ -1,0 +1,14 @@
+title 0.6: New note
+
+User->Browser: user click save button
+note over Browser:
+browser starts executing js-code
+which create a new json object
+add json to notes array
+end note
+
+Browser -> Browser: redrawNotes()
+Browser -> Browser: sendToServer(note)
+
+Browser -> Server: Request Method: POST, Request URL: https://fullstack-exampleapp.herokuapp.com/new_note_spa
+Server --> Browser: Status Code: 201 Created {"message":"note created"}
